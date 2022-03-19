@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Identtii</title>
+    <link rel="icon" type="images/x-icon" href="images/favicon.ico">
+
+    <!--Bootstrap CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <!-- Scroll Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!--Fontawesome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .box-mode {
+            width: 700px;
+            margin: 5% auto;
+        }   
+
+        input {
+            position: relative;
+            display: inline-block;
+            font-size: 20px;
+            box-sizing: border-box;
+            /* transition: .5s; */
+        }
+
+        input[type="text"] {
+            background: #f4fbff;
+            width: 540px;
+            height: 50px;
+            border: none;
+            outline: none;
+            padding: 15px 35px;
+            border-radius: 25px 0 0 25px;
+            font-family: "Open Sans", sans-serif;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 26px;
+            letter-spacing: 0em;
+            text-align: left;
+            /* z-index: 1; */
+        }
+
+        input[type="text"]:focus {
+            border: 1px solid #23A6F0;
+            background: #f4fbff;
+        }
+
+        @media screen and (max-width: 600px) {
+            .box-mode {
+                width: 100%;
+            }
+
+            input[type="text"] {
+                width: 250px;
+                font-size: 10px;
+            }
+        }
+
+        input[type="submit"] {
+            position: relative;
+            left: -4px;
+            border-radius: 0 25px 25px 0;
+            width: 150px;
+            height: 50px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            background-image: linear-gradient(to right, #23A6F0, #02324E);
+            font-family: "Open Sans", sans-serif;
+            color: #f2f2f2;
+        }
+
+        input[type="submit"]:hover {
+            background: #000;
+            color: #fff;
+        }
+
+
+        .search-img {
+            position: relative;
+            top: -40px;
+            left: 15px;
+            width: 16px;
+        }
+
+        .search-img2 {
+            position: relative;
+            top: -40px;
+            left: 535px;
+            width: 16px;
+        }
+
+    </style>
+	
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3EH3PXTVE4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3EH3PXTVE4');
+</script>
+	
+</head>
+	
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light mb-5">
+        <a class="navbar-brand" href="#"><img src="images/homelogo.png" class="logohome" alt="Responsive image"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars text-info" style="font-size: 20px;"></i>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="terms.html">Terms</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="privacy.html">Privacy</a>
+            </li>
+          </ul>
+          <form class="form-inline">
+            <a href="https://instagram.com/identtii_com" target="_blank"><i class="fab fa-instagram text-light mr-3 d-none d-xs-none d-sm-none d-md-block d-lg-block"></i></a>
+            <a href="https://twitter.com/identtii_com" target="_blank"><i class="fab fa-twitter text-light mr-3 d-none d-xs-none d-sm-none d-md-block d-lg-block"></i></a>
+             <button class="button-home" type="button" id="getSign">Sign up<i class="fa fa-arrow-right ml-3"></i></button>
+          </form>
+        </div>
+    </nav>
+
+    <section class="">
+        <div class="container">
+            <div class="hero text-center">
+                <img src="images/deal.png" alt="deal logo" class="hero-img mt-sm-0">
+                <p>
+                    If they are listed here, then DO NOT DEAL.<br>
+                    They have a reputation of being UNREACHABLE
+                </p>
+            </div>
+            <div class="box-mode d-none d-xs-none d-sm-none d-md-block d-lg-block">
+                <form>
+                    <input type="text" placeholder="Name or Phone Number or Email or BVN or NIN" name="search" id="indexSearch">
+                    <input type="submit" name="" value="search" onclick="searchHome(event,'web')">
+                    <img src="images/search.png" class="search-img">
+                    <img src="images/btnlog.png" class="search-img2">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="mobile-search d-block d-xs-block d-sm-block d-md-none d-lg-none mt-5 mb-5">
+            <div class="container">
+                <div class="input-group md-form form-sm form-2 pl-0">
+                    <input class="form-control my-0 py-1 amber-border" id="mobIndexSearchInput" type="text" placeholder="Name or Phone or Email or BVN or NIN" aria-label="Search">
+                    <div class="input-group-append">
+                      <span class="input-group-text bg-info" id="basic-text1" onclick="searchHome(event,'mobile')"><i class="fas fa-search text-light"
+                        aria-hidden="true"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="identity" class="" data-aos-once="fade-up true">
+        <div class="container">
+            <div class="box-image"></div>
+            <center>
+              <button class="getapp mb-5 d-block d-xs-block d-sm-block d-md-none d-lg-none" onclick="getDownload(event)"><img src="images/pi.png" class="pi ml-4">|<img src="images/pi2.png" class="pi2 mr-3">Get App</button>
+            </center>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <div class="lendersbox"></div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 pull">
+                    <p class="p-lenders">
+                        Lenders
+                    </p>
+                    <p class="p2-lenders">
+                        Lenders use <b>Identtii</b> to double check 
+                        loan requests and approvals
+                    </p>
+
+                    <p>
+                        <a href="signup.html" target="_blank"><button class="homestart">Get started <i class="fa fa-arrow-right ml-3"></i></button></a>
+                    </p>
+                </div>
+            </div>
+            <div class="row flex-column-reverse flex-lg-row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 pull">
+                    <p class="p-lenders">
+                        Telcos
+                    </p>
+                    <p class="p2-lenders">
+                        Telcos use <b>Identtii</b> to recover unpaid airtime 
+                        debts in the event that customers yank off their lines
+
+                    </p>
+
+                    <p>
+                        <a href="signup.html" target="_blank"><button class="homestart">Get started <i class="fa fa-arrow-right ml-3"></i></button></a>
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <div class="telbox"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <div class="emplbox"></div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 pull">
+                    <p class="p-lenders">
+                        Employers
+                    </p>
+                    <p class="p2-lenders">
+                        They may have the skill, but concerned employers check employees up on <b>Identtii</b> before they deal
+                    </p>
+
+                    <p>
+                        <a href="signup.html" target="_blank"><button class="homestart">Get started <i class="fa fa-arrow-right ml-3"></i></button></a>
+                    </p>
+                </div>
+            </div>
+            <div class="row flex-column-reverse flex-lg-row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 pull">
+                    <p class="p-lenders">
+                        Landlords
+                    </p>
+                    <p class="p2-lenders">
+                        Landlords check <b>Identtii</b> to ascertain the reputation of prospective tenants
+                    </p>
+
+                    <p>
+                        <a href="signup.html" target="_blank"><button class="homestart">Get started <i class="fa fa-arrow-right ml-3"></i></button></a>
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <div class="landbox"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="protect-community">
+        <div class="community">
+            <section id="protect" class="p-5">
+                <div class="container">
+                    <div class="row flex-column-reverse flex-lg-row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                            <div class="protect-image"></div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                            <p class="protect-head mb-5">
+                                Protect the community,
+                                Get help to reconnect using our APIs
+                            </p>
+                            <p class="protect-paragraph mb-5">
+                                Entered some deals with persons who are now <br>unreachable or unavailable? 
+                                <br>Let’s help you reconnect with them using our <br>powerful APIs
+                            </p>
+
+                            <div class="getbutton">
+                                <a href="signup.html" target="_blank"><button class="button-started">Get started<i class="fa fa-arrow-right ml-3"></i></button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <div class="section-footer">
+            <div class="container">
+                <div class="d-flex bd-highlight">
+                    <div class="mr-5 bd-highlight terms"><a href="privacy.html">Terms</a></div>
+                    <div class="bd-highlight privacy"><a href="terms.html">Privacy</a></div>
+                    <div class="ml-auto p-2 bd-highlight"><a href="https://instagram.com/identtii_com" target="_blank"><i class="fab fa-instagram text-light mr-3"></i></a></div>
+                    <div class=" p-2 bd-highlight"><a href="https://twitter.com/identtii_com" target="_blank"><i class="fab fa-twitter text-light mr-3"></i></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <script>
+       const sign = document.getElementById("getSign");
+        sign.addEventListener("click", () => {
+            window.open("signup.html");
+        })
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!--Custom Javascript-->
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+
+</body>
+</html>

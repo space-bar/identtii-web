@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" id="text-image">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Identtii</title>
+    <link rel="icon" type="images/x-icon" href="images/favicon.ico">
+
+    <!--Bootstrap CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <!--Fontawesome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="ccbody">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <a class="navbar-brand" href="#"><img src="images/homelogo.png" class="logohome" alt="Responsive image"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars text-info" style="font-size: 20px;"></i>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="contact.html">Contact Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="terms.html">Terms</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="privacy.html">Privacy</a>
+            </li>
+          </ul>
+          <form class="form-inline">
+              <a href="https://instagram.com/identtii_com" target="_blank"><i class="fab fa-instagram text-light mr-3 d-none d-xs-none d-sm-none d-md-block d-lg-block"></i></a>
+              <a href="https://twitter.com/identtii_com" target="_blank"><i class="fab fa-twitter text-light mr-3 d-none d-xs-none d-sm-none d-md-block d-lg-block"></i></a>
+                <button class="button-home" type="button" id="getSign">Sign up<i class="fa fa-arrow-right ml-3"></i></button>
+          </form>
+        </div>
+    </nav>
+
+    <div class="protect-community">
+        <div class="community">
+            <section id="contact-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 contact-placed">
+                            <p class="contact-para">
+                                Contact Us
+                            </p>
+                            <p class="contact-second-paragraph">
+                                You can reach us on our social media handles or fill the 
+                                form to reach us via email on <a href="mailto:hi@identtii.com?subject=Inquiry">hi@identtii.com</a>
+                            </p>
+                            <img src="images/line.png" alt="line">
+            
+                            <form class="form-inline mt-3">
+                                
+                                
+                                <a href="https://instagram.com/identtii_com" target="_blank"><i class="fab fa-instagram text-light mr-3"></i></a>
+                                <a href="https://twitter.com/identtii_com" target="_blank"><i class="fab fa-twitter text-light mr-3"></i></a>
+               
+                            </form>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                            <div class="contact-form">
+                                <form id="contact-form">
+                                    <input type="text" name="name" id="getname" class="input mb-3" placeholder="Full Name">
+                                    <input type="email" name="email" id="getemail" class="input mb-3" placeholder="Email Address">
+                                    <input type="tel" name="phone" id="getphone" class="input mb-3" placeholder="Phone Number">
+                                    <textarea name="Message" id="getmessage" cols="30" rows="10" class="textarea mb-3" placeholder="Message..."></textarea>
+                                    <button class="contact-submit" type="button" onclick="getContactData()">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="d-flex bd-highlight">
+                <div class="mr-5 bd-highlight terms"><a href="privacy.html">Terms</a></div>
+                <div class="bd-highlight privacy"><a href="terms.html">Privacy</a></div>
+                <div class="ml-auto p-2 bd-highlight"><a href="https://instagram.com/identtii_com" target="_blank"><i class="fab fa-instagram text-light mr-3"></i></a></div>
+                <div class=" p-2 bd-highlight"><a href="https://twitter.com/identtii_com" target="_blank"><i class="fab fa-twitter text-light mr-3"></i></a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const sign = document.getElementById("getSign");
+        sign.addEventListener("click", () => {
+            window.open("signup.html");
+        })
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!--Custom Javascript-->
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+
+</body>
+</html>

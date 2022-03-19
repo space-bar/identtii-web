@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" style="position: relative" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search | Identtii</title>
+    <link rel="icon" type="images/x-icon" href="images/favicon.ico">
+
+    <!--Bootstrap CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <!--Fontawesome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- <link rel="stylesheet" href="sweetalert2.min.css"> -->
+
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="style.css">
+	
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3EH3PXTVE4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3EH3PXTVE4');
+</script>
+	
+</head>
+<style>
+    .box-mode {
+        width: 700px;
+        margin: 5% auto;
+    } 
+    input {
+        position: relative;
+        display: inline-block;
+        font-size: 20px;
+        box-sizing: border-box;
+        /* transition: .5s; */
+    }
+
+    input[type="text"] {
+        background: #f4fbff;
+        width: 540px;
+        height: 50px;
+        border: none;
+        outline: none;
+        padding: 15px 35px;
+        border-radius: 25px 0 0 25px;
+        font-family: "Open Sans", sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    @media screen and (max-width: 600px) {
+        .box-mode {
+            width: 100%;
+        }
+
+        input[type="text"] {
+            width: 250px;
+            font-size: 10px;
+        }
+    }
+
+    input[type="text"]:focus {
+        border: 1px solid #23A6F0; 
+        background: #f4fbff;
+    }
+
+    input[type="submit"] {
+        position: relative;
+        left: -4px;
+        border-radius: 0 25px 25px 0;
+        width: 150px;
+        height: 50px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background-image: linear-gradient(to right, #23A6F0, #02324E);
+        font-family: "Open Sans", sans-serif;
+        color: #f2f2f2;
+    }
+
+    @media screen and (max-width: 600px) {
+        input[type="submit"] {
+            width: 60px;
+            font-size: 12px;
+            border-radius: 0 10px 10px 0;
+        }
+    }
+
+    input[type="submit"]:hover {
+        background: #000;
+        color: #fff;
+    }
+
+
+    .search-img {
+        position: relative;
+        top: -40px;
+        left: 15px;
+        width: 16px;
+    }
+
+    .search-img2 {
+        position: relative;
+        top: -40px;
+        left: 535px;
+        width: 16px;
+    }
+
+    @media screen and (max-width: 600px) {
+        .search-img, .search-img2 {
+            display: none;
+        }
+    }
+
+</style>
+<body onload="searchQuery(event)">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#"><img src="images/homelogo.png" class="logohome" alt="Responsive image"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars text-info" style="font-size: 20px;"></i>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="terms.html">Terms</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="privacy.html">Privacy</a>
+            </li>
+          </ul>
+          <form class="form-inline">
+              <a href="https://instagram.com/identtii_com" target="_blank"><i class="fab fa-instagram text-light mr-3 d-none d-xs-none d-sm-none d-md-block d-lg-block"></i></a>
+              <a href="https://twitter.com/identtii_com" target="_blank"><i class="fab fa-twitter text-light mr-3 d-none d-xs-none d-sm-none d-md-block d-lg-block"></i></a>
+              <button class="button-home" type="button" id="getSign">Sign up<i class="fa fa-arrow-right ml-3"></i></button>
+          </form>
+        </div>
+    </nav>
+
+    <section class="">
+        <div class="container">
+            <div class="box-mode d-none d-xs-none d-sm-none d-md-block d-lg-block">
+                <form>
+                    <input type="text" placeholder="Name or Phone Number or Email or BVN or NIN" name="search" id="details">
+                    <input type="submit" name="" value="search" onclick="getDetails(event, 'search','', 'web')">
+                    <img src="images/search.png" class="search-img">
+                    <img src="images/btnlog.png" class="search-img2">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="mobile-search d-block d-xs-block d-sm-block d-md-none d-lg-none mt-5 mb-5 stayput">
+            <div class="container">
+                <div class="input-group md-form form-sm form-2 pl-0">
+                    <input class="form-control my-0 py-1 amber-border" type="text" id="mobSearchInput" placeholder="Name or Phone or Email or BVN or NIN" aria-label="Search">
+                    <div class="input-group-append">
+                      <span class="input-group-text bg-info" id="basic-text1" onclick="getDetails(event, 'search', '', 'mobile')"><i class="fas fa-search text-light"
+                        aria-hidden="true" ></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="oversight"></div>
+    </div>
+    
+    <section class="section-pagination">
+        <div class="container">
+            
+
+            <nav class="mt-5 web-view">
+                <ul class="pagination pg-blue justify-content-center">
+                  <button class="get-previous" onclick="getDetails(event, 'prev', '', 'web')"><i class="fa fa-chevron-left"></i></button>
+                  <p class="showPage"></p>
+                  <button class="get-next" onclick="getDetails(event, 'next', '', 'web')"><i class="fa fa-chevron-right"></i></button>
+                </ul>
+            </nav>
+            <nav class="mobile-view mt-5">
+                <ul class="pagination pg-blue justify-content-center">
+                  <button class="get-previous2" onclick="getDetails(event, 'prev', '', 'mobile')"><i class="fa fa-chevron-left"></i></button>
+                  <p class="showPage2"></p>
+                  <button class="get-next2" onclick="getDetails(event, 'next', '', 'mobile')"><i class="fa fa-chevron-right"></i></button>
+                </ul>
+            </nav>
+            <hr class="showline mt-5 mb-5">
+        </div>
+    </section>
+
+
+
+    <section id="getSearch">
+        <div class="container">
+            <div class="occupation">
+                <div class="check-occupation">
+                    <div class="checkOccupation-head">
+                        <p>Employers</p>
+                    </div>
+                    <div class="checkOccupation-body">
+                        <p>
+                            Some employers check here before giving you the job. 
+                            Please make sure you aren't listed as it speaks to your reputation.
+                        </p>
+                    </div>
+                </div>
+                <div class="check-occupation">
+                    <div class="checkOccupation-head">
+                        <p>Lenders</p>
+                    </div>
+                    <div class="checkOccupation-body">
+                        <p>
+                            Need a new loan? Lenders check here before giving loans. 
+                            If they see you listed, it doesn't speak well of your credibility.
+                        </p>
+                    </div>
+                </div>
+                <div class="check-occupation">
+                    <div class="checkOccupation-head">
+                        <p>Telcos</p>
+                    </div>
+                    <div class="checkOccupation-body">
+                        <p>
+                            Now you can easily pay back borrowed credits 
+                            on lines that you've misplaced or yanked off. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <div class="occupation">
+                <div class="check-occupation">
+                    <div class="checkOccupation-head">
+                        <p>Landlords</p>
+                    </div>
+                    <div class="checkOccupation-body">
+                        <p>
+                            If you are listed here, you have a slim chance of 
+                            getting that new apartment. Landlords and their 
+                            agents are now checking Identtii
+                        </p>
+                    </div>
+                </div>
+                <div class="check-occupation2">
+                    <div class="checkOccupation-head">
+                        <p>Travels & Tours</p>
+                    </div>
+                    <div class="checkOccupation-body">
+                        <p>
+                            Just imagine being denied a VISA because you are 
+                            listed here! Did you just say it's a long shot? Well, what if?
+                        </p>
+                    </div>
+                </div>
+                <div class="check-occupation">
+                    <div class="checkOccupation-head">
+                        <p>Asset Financing</p>
+                    </div>
+                    <div class="checkOccupation-body">
+                        <p>
+                            Buy now pay later is becoming popular. This service is available to those who are always available to repay as at when due. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <div class="d-flex bd-highlight">
+                <div class="mr-5 bd-highlight terms"><a href="privacy.html">Terms</a></div>
+                <div class="bd-highlight privacy"><a href="terms.html">Privacy</a></div>
+                <div class="ml-auto p-2 bd-highlight"><a href="https://instagram.com/identtii_com" target="_blank"><i class="fab fa-instagram text-light mr-3"></i></a></div>
+                <div class=" p-2 bd-highlight"><a href="https://twitter.com/identtii_com" target="_blank"><i class="fab fa-twitter text-light mr-3"></i></a></div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        const sign = document.getElementById("getSign");
+        sign.addEventListener("click", () => {
+            window.open("signup.html");
+        })
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!--Custom Javascript-->
+    <script type="text/javascript" src="index.js"></script>
+    <!-- <script type="text/javascript" src="script.js"></script> -->
+</body>
+</html>
